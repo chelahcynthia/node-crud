@@ -47,6 +47,14 @@ app.post('/products', async(req, res) => {
     }
 })
 
+//  update a product
+app.put('/products/:id',async(req,res) => {
+    try {
+        
+    }
+})
+
+
 
 app.listen(3000, () => {
     console.log("node api is running on port 3000");
