@@ -50,7 +50,11 @@ app.post('/products', async(req, res) => {
 //  update a product
 app.put('/products/:id',async(req,res) => {
     try {
-        
+
+    } catch (error) {
+        res.status(500).json({message: error.message
+        });
+
     }
 })
 
