@@ -50,6 +50,10 @@ app.post('/products', async(req, res) => {
 //  update a product
 app.put('/products/:id',async(req,res) => {
     try {
+        // get id from paramas
+        const {id} = req.params;
+        const product = await Product.findByIdAndUpdate(id, req.body);
+
 
     } catch (error) {
         res.status(500).json({message: error.message
